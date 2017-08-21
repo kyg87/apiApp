@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { FormsModule} from '@angular/forms';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,6 +21,7 @@ import { PeopleServiceProvider } from '../providers/people-service/people-servic
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
     IonicModule.forRoot(MyApp)
   ],

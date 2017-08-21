@@ -23,5 +23,43 @@
     
   
   </div>
+  <form #myForm = "ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="flexDiv">
+      <div class="flexItem">
+        <input 
+        type="radio" name="emotion" 
+        id="sad" class="input-hidden"value="1"[(ngModel)]="user.choice"/>
+        <label for="sad">
+          <img 
+            src="//placekitten.com/150/150" 
+            alt="I'm sad" />
+        </label>
+      </div>
+      <div class="flexItem">
+          <input 
+          type="radio" name="emotion" 
+          id="sad1" class="input-hidden"value="2" [(ngModel)]="user.choice"/>
+          <label for="sad1">
+            <img 
+              src="//placekitten.com/151/151" 
+              alt="I'm sad" />
+          </label>
+        </div>
+        <div class="flexItem">
+            <input 
+            type="radio" name="emotion" 
+            id="sad2" class="input-hidden" value="3"[(ngModel)]="user.choice"/>
+            <label for="sad2">
+              <img 
+                src="//placekitten.com/152/152" 
+                alt="I'm sad" />
+            </label>
+        </div>
+          
+      </div>
+      <button ion-button type="submit">Submit</button>
+    </form>
     
+    <h2>Model</h2>
+    {{myForm.value | json}}
 </ion-content>

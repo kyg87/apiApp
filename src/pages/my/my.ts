@@ -15,6 +15,11 @@ import { NavController, NavParams } from 'ionic-angular';
 
 export class MyPage {
 
+  registForm : any;
+  user = {
+    choice : ''
+  }
+  
 
   myPets = {
 
@@ -28,6 +33,9 @@ export class MyPage {
       color: 'brown'
     }
   };
+  onSubmit(form){
+    console.log(form.value);
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
